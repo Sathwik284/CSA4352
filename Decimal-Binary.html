@@ -1,0 +1,13 @@
+<script>
+function decimalToBinary(decimal) {
+  let binary = "";
+  while (decimal > 0) {
+    binary = (decimal % 2) + binary;
+    decimal = Math.floor(decimal / 2);
+  }
+  return binary;
+}
+let decimal = parseInt(prompt("Enter a decimal number:"));
+let binary = decimalToBinary(decimal);
+document.write(`The binary representation of ${decimal} is ${binary}.`);
+</script>
